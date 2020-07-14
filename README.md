@@ -1,2 +1,1 @@
-# inspirational-quotes-generator
-Want some inspirational quotes to fuel your day? Say no more. 
+To use, simply download this repository, unzip it, and run main.cpp. 
