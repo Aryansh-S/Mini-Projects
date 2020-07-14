@@ -8,7 +8,7 @@ using str = std::string;
 using std::pair; 
   #define f first
   #define s second
-  #define mp make_pair
+  #define mp std::make_pair
 
 template<class T, int SZ> using ar = std::array<T,SZ>; 
 
