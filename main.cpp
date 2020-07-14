@@ -1,7 +1,7 @@
 #include <project-headers.h>
 
 str fin;  
-const bool compound = 1; 
+const bool cmpnd = 1; 
 
 template<class T> inline size_t get(T var) { return rand(0, var.size() - 1); }
 
@@ -18,7 +18,7 @@ int main() {
   std::cin.tie(0)->sync_with_stdio(0); 
   
   fin = sent(); 
-  if(compound) fin += ", but ", fin += sent(); 
+  if(cmpnd) fin += ", but ", fin += sent(); 
   
   std::cout << fin << "\n"; 
 }
