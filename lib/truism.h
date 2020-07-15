@@ -10,7 +10,7 @@ using std::pair;
   #define s second
   #define mp std::make_pair
 
-using vec = std::vector; 
+template<class T> using vec = std::vector<T>; 
 
 inline namespace v1 { 
   const vec<pair<str,int>> subject = { mp("you", 1), mp("the universe", 2), mp("existence", 2), mp("god", 2), mp("the soul", 2), mp("subjects", 2) };
