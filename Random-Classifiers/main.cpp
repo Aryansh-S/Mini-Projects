@@ -4,7 +4,7 @@
 using namespace std;
 
 string yr, dif, sub, bar = "|"; 
-const int fs = 75;
+int fs = 75;
 
 int main() {
   string qry; cin >> qry; 
