@@ -5,10 +5,10 @@
 2011.5 1 circularmotion |
 2011.6 1 collisions |
 2011.7 1 conservationofangularmomentum |
-2011.8 1 Archimedes’Principle |
+2011.8 1 Archimedes'Principle |
 2011.9 1 springs Hooke’sLaw |
 2011.10 3 simplependulum |
-2011.11 2 Archimedes’Principle |
+2011.11 2 Archimedes'Principle |
 2011.12 1 gravitation |
 2011.13 2 torque staticfriction tension |
 2011.14 2 linearmotion |
@@ -66,7 +66,7 @@
 2013.16 2 dimensionalanalysis |
 2013.17 3 rotatingreferenceframe equilibrium |
 2013.18 1 conservationoflinearmomentum |
-2013.19 1 simplependulum, tension |
+2013.19 1 simplependulum tension |
 2013.20 2 simplependulum tension |
 2013.21 3 simplependulum oscillations |
 2013.22 1 torque tension equilibrium |
