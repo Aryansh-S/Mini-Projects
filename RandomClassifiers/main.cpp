@@ -5,10 +5,9 @@ using namespace std;
 
 string yr, dif, sub, bar = "|"; 
 const int fs = 75;
-string qry; 
 
 int main() {
-  cin >> qry; 
+  string qry; cin >> qry; 
   ifstream fin("tabularFma.txt");
   while(fs--) {
     fin >> yr >> dif; 
