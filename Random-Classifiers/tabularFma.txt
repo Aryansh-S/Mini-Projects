@@ -73,3 +73,4 @@
 2013.23 1 springs energy Hooke’sLaw |
 2013.24 1 springs energy Hooke’sLaw |
 2013.25 2 kineticfriction |
+EOF
