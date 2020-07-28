@@ -12,7 +12,7 @@ int main() {
   while(fs--) {
     fin >> yr >> dif; 
     while(1) {
-      cin >> sub; if(sub == bar) break; 
+      fin >> sub; if(sub == bar) break; 
       if(sub == qry) cout << yr << "\n";  
     }
   }
