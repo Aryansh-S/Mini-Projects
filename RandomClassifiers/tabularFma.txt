@@ -48,3 +48,28 @@
 2012.23 2 thoughtexperiments power |
 2012.24 3 springs Hooke’sLaw |
 2012.25 3 Kepler’sLaws |
+2013.1 1 linearmotion |
+2013.2 1 projectilemotion |
+2013.3 1 projectilemotion |
+2013.4 2 torque equilibrium staticfriction |
+2013.5 1 linearmotion forces |
+2013.6 1 linearmotion |
+2013.7 1 linearmomentum kineticenergy |
+2013.8 1 work kineticenergy |
+2013.9 1 linearmomentum kineticenergy |
+2013.10 2 momentofinertia rollingmotion |
+2013.11 2 forces |
+2013.12 2 rollingmotion torque conservationofenergy |
+2013.13 1 rotationalmotion |
+2013.14 2 collisions |
+2013.15 3 Archimedes’Principle torque |
+2013.16 2 dimensionalanalysis |
+2013.17 3 rotatingreferenceframe equilibrium |
+2013.18 1 conservationoflinearmomentum |
+2013.19 1 simplependulum, tension |
+2013.20 2 simplependulum tension |
+2013.21 3 simplependulum oscillations |
+2013.22 1 torque tension equilibrium |
+2013.23 1 springs energy Hooke’sLaw |
+2013.24 1 springs energy Hooke’sLaw |
+2013.25 2 kineticfriction |
