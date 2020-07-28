@@ -1,0 +1,50 @@
+2011.1 A ⋆ linearmotion
+2011.2 E ⋆ linearmotion
+2011.3 D ⋆ linearmotion
+2011.4 B ⋆ linearmotion
+2011.5 B ⋆ circularmotion
+2011.6 E ⋆ collisions
+2011.7 B ⋆ conservationofangularmomentum
+2011.8 D ⋆ Archimedes’Principle
+2011.9 C ⋆ springs Hooke’sLaw
+2011.10 C ⋆⋆⋆ simplependulum
+2011.11 C ⋆⋆ Archimedes’Principle
+2011.12 C ⋆ gravitation
+2011.13 D ⋆⋆ torque staticfriction tension
+2011.14 D ⋆⋆ linearmotion
+2011.15 D ⋆⋆⋆ springs preloading energy
+2011.16 E ⋆ staticfriction
+2011.17 D ⋆⋆⋆ kineticfriction work conservationofenergy
+2011.18 A ⋆ kineticfriction work conservationofenergy
+2011.19 C ⋆⋆ springs oscillations
+2011.20 B ⋆⋆ springs conservationofenergy
+2011.21 A ⋆ dimensionalanalysis
+2011.22 D ⋆⋆ power torque
+2011.23 E ⋆⋆⋆ Kepler’sLaws
+2011.24 A ⋆⋆ power kineticfriction
+2011.25 C ⋆⋆⋆ rollingmotion kineticfriction
+2012.1 D ⋆ linearmotion
+2012.2 A ⋆⋆ projectilemotion
+2012.3 C ⋆ centerofmass
+2012.4 B ⋆ conservationoflinearmomentum
+2012.5 D ⋆⋆ collisions energy
+2012.6 B ⋆ linearmotion
+2012.7 E ⋆ linearmotion
+2012.8 B ⋆⋆ kineticfriction springs work energy
+2012.9 C ⋆⋆ gravitation
+2012.10 D ⋆⋆⋆ rollingmotion conservationofenergy
+2012.11 B ⋆⋆ kineticfriction tension
+2012.12 D ⋆⋆ forces equilibrium
+2012.13 E ⋆⋆ kineticenergy work
+2012.14 A ⋆⋆ torque
+2012.15 A ⋆⋆ power
+2012.16 E ⋆⋆ springs oscillations
+2012.17 A ⋆ dataanalysis
+2012.18 B ⋆ springs oscillations
+2012.19 D ⋆⋆⋆ fluids work power
+2012.20 E ⋆⋆ Archimedes’Principle
+2012.21 C ⋆⋆ springs Hooke’sLaw
+2012.22 A ⋆ dimensionalanalysis
+2012.23 C ⋆⋆ thoughtexperiments power
+2012.24 C ⋆⋆⋆ springs Hooke’sLaw
+2012.25 C ⋆⋆⋆ Kepler’sLaws
