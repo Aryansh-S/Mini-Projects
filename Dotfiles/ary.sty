@@ -12,6 +12,9 @@
 \titledesign{title}{author} -- generates a designed report title without a date
 \titledesigntoday{title}{author} -- generates a designed report title with today's date
 (of course, text sizes can be adjusted easily along with the color of the design to prevent intersection)
+
+Example of color design optional arg:
+\titledesigntoday{title}{author}[color] -- adds color option (default is same as theme, of course)
 %%%%%%%%%%
 \toc -- generates a proper table of contents
 \part, \chapter, \section, \subsection -- work similarly
@@ -23,6 +26,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{minted}
+\usepackage{xargs}
 \usepackage{titlesec}
 \usepackage{titling}
 \usepackage{titlepic}
@@ -184,9 +188,9 @@
 \end{titlepage}
 }
 
-\newcommand{\titledesign}[2]{
+\newcommandx{\titledesign}[3][3 = \themecolor]{
 \begin{titlepage}
-\putdesign{\themecolor}
+\putdesign{#3}
 \begin{center}
 \topskip0pt
 \vspace*{\fill}
@@ -199,9 +203,9 @@
 \end{titlepage}
 }
 
-\newcommand{\titledesigntoday}[2]{
+\newcommandx{\titledesigntoday}[3][3 = \themecolor]{
 \begin{titlepage}
-\putdesign{\themecolor}
+\putdesign{#3}
 \begin{center}
 \topskip0pt
 \vspace*{\fill}
