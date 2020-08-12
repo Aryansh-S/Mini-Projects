@@ -22,7 +22,15 @@ Example of color design optional arg to change color of design:
 %%%%%%%%%%
 
 \toc -- generates a proper table of contents
-\part, \chapter, \section, \subsection -- work similarly
+
+%%%%%%%%%%
+
+\part, \chapter, \section, \subsection -- work similarly 
+
+%%%%%%%%%%
+
+\footnote -- works similarly
+\blfootnote -- produces an unnumbered footnote
 
 \end{comment}
 % END COMMAND LIST %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -68,6 +76,13 @@ Example of color design optional arg to change color of design:
 \hyphenpenalty=10000
 \hbadness=10000
 \setlength{\parindent}{0pt}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -224,4 +239,12 @@ Example of color design optional arg to change color of design:
 \end{center}
 \end{titlepage}
 }
+
+\tikzset{every tree node/.style={minimum size=3em,draw,circle},
+         blank/.style={draw=none},
+         edge from parent/.style=
+         {draw,edge from parent path={(\tikzparentnode) -- (\tikzchildnode)}},
+         level distance=1.5cm}
+
+\renewcommand\footnoterule{}
 % END STY %
