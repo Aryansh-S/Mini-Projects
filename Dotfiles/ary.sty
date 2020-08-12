@@ -1,0 +1,101 @@
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{minted}
+\usepackage{titlesec}
+\usepackage{fancyvrb}
+\usepackage{lipsum}
+\usepackage{comment}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[inline]{asymptote}
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{yhmath}
+\usepackage{amssymb}
+\usepackage[margin=0.7in]{geometry} % also control margin size
+\usepackage{tikz-qtree}
+\usepackage{tcolorbox}
+\usepackage{tikz,graphicx}
+\usepackage[usestackEOL]{stackengine}
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\usepackage{epigraph}
+\usepackage{mathpazo}
+
+\setlength{\parindent}{0pt}
+
+\definecolor{royal}{rgb}{0.9, 0.17, 0.31}
+
+\newcommand{\themecolor}{black}
+\newcommand{\theme}[1]{\renewcommand{\themecolor}{#1}}
+
+\let\oldthechapter\thechapter
+\let\oldthesection\thesection
+\let\oldthesubsection\thesubsection
+\let\oldthepart\thepart
+\renewcommand\thechapter{\textcolor{\themecolor}{\oldthechapter}}
+\renewcommand\thesection{\textcolor{\themecolor}{\oldthesection}}
+\renewcommand\thesubsection{\textcolor{\themecolor}{\oldthesubsection}}
+\renewcommand\thepart{\textcolor{\themecolor}{\oldthepart}}
+
+\let\oldsection\section
+\let\oldsubsection\section
+\let\oldtitle\title
+
+\renewcommand{\section}[1]{\oldsection*{\textcolor{\themecolor}{§ \hspace{-2mm} \thesection} \hspace{1mm} \textbf{#1}}}
+
+\renewcommand{\subsection}[1]{\oldsubsection*{\textcolor{\themecolor}{§ \hspace{-2mm} \thesubsection} \hspace{1mm} \textbf{#1}}}
+
+\renewcommand{\title}[1]{\oldtitle{\huge{\bfseries{\textbf{#1}}}}}
+
+\newcommand{\noextra}{\author{\vspace{-15mm}}
+\date{\vspace{-15mm}}}
+
+\newcommand{\nodate}{\date{\vspace{-10mm}}}
+\newcommand{\zerosection}{\setcounter{section}{-1}}
+\newcommand{\zerochapter}{\setcounter{chapter}{-1}}
+\newcommand{\zeropart}{\setcounter{part}{-1}}
+
+\titleformat{\chapter}{}{\bf\Huge\textcolor{\themecolor}{\thechapter} \,}{0em}{\huge\bf}
+\titlespacing{\chapter}{0pt}{0pt}{0.75cm}
+
+\titleformat{\part}{}{\bf\Huge\textcolor{\themecolor}{\thepart} \,}{0em}{\huge\bf}
+\titlespacing{\part}{0pt}{0pt}{0.75cm}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=cyan
+}
+\urlstyle{same}
+
+\usepackage{tocloft}
+\usepackage{blindtext}
+
+\setlength{\cftpartindent}{0em}
+\setlength{\cftchapindent}{0em}
+
+\renewcommand{\cftchapfont}{\Large\bf}
+\renewcommand{\cftpartfont}{\Large\bf}
+\renewcommand{\cftpartdotsep}{\cftdotsep}
+\renewcommand{\cftchapdotsep}{\cftdotsep}
+
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftaftertoctitleskip}{0.75cm}
