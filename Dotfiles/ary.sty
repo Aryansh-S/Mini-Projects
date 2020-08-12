@@ -9,7 +9,7 @@ The following credit suffices in a distributed source file; the compiled PDF doe
 For quick use in an Overleaf project, import it from the below URL:
 % https://raw.githubusercontent.com/Aryansh-S/Mini-Projects/master/Dotfiles/ary.sty
 
->> A package for reports; see the command list below for instruction
+>> A package for reports (or other document styles that support parts and chapters - simpler projects like articles are incompatible); see the command list below for instruction
 
 [BEGIN COMMAND LIST]
 
@@ -21,7 +21,8 @@ For quick use in an Overleaf project, import it from the below URL:
 \titleplaintoday{title}{author} -- generates a plain report title with today's date
 \titledesign{title}{author} -- generates a designed report title without a date
 \titledesigntoday{title}{author} -- generates a designed report title with today's date
-(of course, text sizes can be adjusted easily along with the color of the design to prevent intersection)
+
+(of course, text sizes can be adjusted easily along with the color of the design - see the optional argument below - to prevent intersection -- for instance, prefix an argument with \huge to make its size slightly smaller than the default)
 
 Example of color design optional arg to change color of design:
 \titledesigntoday{title}{author}[color] -- adds color option (default is same as theme, of course)
@@ -65,8 +66,8 @@ Example of color design optional arg to change color of design:
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage[inline]{asymptote}
-\usepackage [english]{babel}
-\usepackage [autostyle, english = american]{csquotes}
+\usepackage[english]{babel}
+\usepackage[autostyle, english = american]{csquotes}
 \MakeOuterQuote{"}
 \usepackage{float}
 \usepackage{textcomp}
@@ -149,7 +150,7 @@ Example of color design optional arg to change color of design:
 
 % TITLE DESIGN CREDIT : https://latexdraw.com/how-to-create-a-beautiful-cover-page-in-latex-using-tikz/ %
 \newcommand{\putdesign}[1]{
-    \begin{tikzpicture}[overlay,remember picture]
+\begin{tikzpicture}[overlay,remember picture]
 \usetikzlibrary{calc}
 \fill[black!2] (current page.south west) rectangle (current page.north east);
 \begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(-.5,-6)$)}}]
