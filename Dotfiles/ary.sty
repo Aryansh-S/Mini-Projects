@@ -1,10 +1,33 @@
+\usepackage{comment}
+
+% ARY.STY -- CREATED BY ARYANSH SHRIVASTAVA %
+% A package for reports %
+
+% BEGIN COMMAND LIST %
+\begin{comment}
+\theme{color} -- sets theme color (default is royal, a custom color), used in designs and fonts throughout the document
+%%%%%%%%%%
+\titleplain{title}{author} -- generates a plain report title without a date
+\titleplaintoday{title}{author} -- generates a plain report title with today's date
+\titledesign{title}{author} -- generates a designed report title without a date
+\titledesigntoday{title}{author} -- generates a designed report title with today's date
+%%%%%%%%%%
+\toc -- generates a proper table of contents
+\part, \chapter, \section, \subsection -- work similarly
+\end{comment}
+% END COMMAND LIST %
+
+% BEGIN STY %
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{minted}
 \usepackage{titlesec}
+\usepackage{titling}
+\usepackage{titlepic}
+\usepackage{setspace}
 \usepackage{fancyvrb}
 \usepackage{lipsum}
-\usepackage{comment}
 \usepackage[dvipsnames]{xcolor}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -21,9 +44,7 @@
 \MakeOuterQuote{"}
 \usepackage{float}
 \usepackage{textcomp}
-\usepackage{amsmath}
 \usepackage{yhmath}
-\usepackage{amssymb}
 \usepackage[margin=0.7in]{geometry} % also control margin size
 \usepackage{tikz-qtree}
 \usepackage{tcolorbox}
@@ -31,51 +52,11 @@
 \usepackage[usestackEOL]{stackengine}
 \tolerance=1
 \emergencystretch=\maxdimen
-\hyphenpenalty=10000
-\hbadness=10000
-
 \usepackage{epigraph}
 \usepackage{mathpazo}
-
+\hyphenpenalty=10000
+\hbadness=10000
 \setlength{\parindent}{0pt}
-
-\definecolor{royal}{rgb}{0.9, 0.17, 0.31}
-
-\newcommand{\themecolor}{black}
-\newcommand{\theme}[1]{\renewcommand{\themecolor}{#1}}
-
-\let\oldthechapter\thechapter
-\let\oldthesection\thesection
-\let\oldthesubsection\thesubsection
-\let\oldthepart\thepart
-\renewcommand\thechapter{\textcolor{\themecolor}{\oldthechapter}}
-\renewcommand\thesection{\textcolor{\themecolor}{\oldthesection}}
-\renewcommand\thesubsection{\textcolor{\themecolor}{\oldthesubsection}}
-\renewcommand\thepart{\textcolor{\themecolor}{\oldthepart}}
-
-\let\oldsection\section
-\let\oldsubsection\section
-\let\oldtitle\title
-
-\renewcommand{\section}[1]{\oldsection*{\textcolor{\themecolor}{§ \hspace{-2mm} \thesection} \hspace{1mm} \textbf{#1}}}
-
-\renewcommand{\subsection}[1]{\oldsubsection*{\textcolor{\themecolor}{§ \hspace{-2mm} \thesubsection} \hspace{1mm} \textbf{#1}}}
-
-\renewcommand{\title}[1]{\oldtitle{\huge{\bfseries{\textbf{#1}}}}}
-
-\newcommand{\noextra}{\author{\vspace{-15mm}}
-\date{\vspace{-15mm}}}
-
-\newcommand{\nodate}{\date{\vspace{-10mm}}}
-\newcommand{\zerosection}{\setcounter{section}{-1}}
-\newcommand{\zerochapter}{\setcounter{chapter}{-1}}
-\newcommand{\zeropart}{\setcounter{part}{-1}}
-
-\titleformat{\chapter}{}{\bf\Huge\textcolor{\themecolor}{\thechapter} \,}{0em}{\huge\bf}
-\titlespacing{\chapter}{0pt}{0pt}{0.75cm}
-
-\titleformat{\part}{}{\bf\Huge\textcolor{\themecolor}{\thepart} \,}{0em}{\huge\bf}
-\titlespacing{\part}{0pt}{0pt}{0.75cm}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -86,16 +67,150 @@
 }
 \urlstyle{same}
 
+\let\oldthesection\thesection
+\let\oldthechapter\thechapter
+\let\oldthepart\thepart
+\renewcommand{\thesection}{\textcolor{\themecolor}{\S\,\oldthesection}}
+\renewcommand{\thechapter}{\textcolor{\themecolor}{\oldthechapter}}
+\renewcommand{\thepart}{\textcolor{\themecolor}{\oldthepart} \hspace{-3.5mm}}
+
+\definecolor{royal}{rgb}{0.9, 0.17, 0.31}
+\newcommand{\themecolor}{royal}
+\newcommand{\theme}[1]{\renewcommand{\themecolor}{#1}}
+
 \usepackage{tocloft}
 \usepackage{blindtext}
-
 \setlength{\cftpartindent}{0em}
 \setlength{\cftchapindent}{0em}
-
 \renewcommand{\cftchapfont}{\Large\bf}
 \renewcommand{\cftpartfont}{\Large\bf}
 \renewcommand{\cftpartdotsep}{\cftdotsep}
 \renewcommand{\cftchapdotsep}{\cftdotsep}
-
 \setlength{\cftbeforetoctitleskip}{0pt}
 \setlength{\cftaftertoctitleskip}{0.75cm}
+
+\newcommand{\nodate}{\date{\vspace{-1cm}}}
+
+\titleformat{\chapter}{}{\bf\Huge\textcolor{\themecolor}{\thechapter} \,}{0em}{\huge\bf}
+
+\titlespacing{\chapter}{0pt}{0pt}{0.75cm}
+
+\titleformat{\part}{}{\bf\Huge\textcolor{\themecolor}{\thepart} \,}{0em}{\huge\bf}
+
+\titlespacing{\part}{0pt}{0pt}{0.75cm}
+
+\let\oldtitle\title
+\usepackage{titletoc}
+
+\titleclass{\part}{top}
+\titleformat{\part}[display]
+  {\normalfont\Huge}{\centering\thepart}{1em}{\centering}
+
+\newcommand{\toc}{
+\doublespacing
+\tableofcontents
+\singlespacing
+}
+
+\posttitle{\par\end{center} \vspace{0.2em}}
+
+% TITLE DESIGN CREDIT : https://latexdraw.com/how-to-create-a-beautiful-cover-page-in-latex-using-tikz/ %
+\newcommand{\putdesign}[1]{
+    \begin{tikzpicture}[overlay,remember picture]
+\usetikzlibrary{calc}
+\fill[black!2] (current page.south west) rectangle (current page.north east);
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(-.5,-6)$)}}]
+\shade[rounded corners=18pt, left color=#1, right color=#1!40] ($(current page.north west)+(-.5,-6)$) rectangle ++(9,1.5);
+\end{scope}
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(.5,-10)$)}}]
+\shade[rounded corners=18pt, left color=#1,right color=#1!60] ($(current page.north west)+(0.5,-10)$) rectangle ++(15,1.5);
+\end{scope}
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(0.5,-10)$)}}]
+\shade[rounded corners=8pt, left color=#1] ($(current page.north west)+(1.5,-9.55)$) rectangle ++(7,.6);
+\end{scope}
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north)+(-1.5,-3)$)}}]
+\shade[rounded corners=12pt, left color=#1!80, right color=#1!60] ($(current page.north)+(-1.5,-3)$) rectangle ++(9,0.8);
+\end{scope}
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north)+(-3,-8)$)}}]
+\shade[rounded corners=28pt, left color=#1!80, right color=#1!80] ($(current page.north)+(-3,-8)$) rectangle ++(15,1.8);
+\end{scope}
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(4,-15.5)$)}}]
+\shade[rounded corners=25pt, left color=#1, right color=#1] ($(current page.north west)+(4,-15.5)$) rectangle ++(30,1.8);
+\end{scope}
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(13,-10)$)}},]
+\shade[rounded corners=22pt, left color=#1
+,right color=#1] ($(current page.north west)+(13,-10)$) rectangle ++(15,1.5);
+\end{scope}
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(18,-8)$)}},]
+\shade[rounded corners=8pt, left color=#1] ($(current page.north west)+(18,-8)$) rectangle ++(15,0.6);
+\end{scope}
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(19,-5.65)$)}},]
+\shade[rounded corners=12pt, left color=#1] ($(current page.north west)+(19,-5.65)$) rectangle ++(15,0.8);
+\end{scope}
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(20,-9)$)}}]
+\end{scope}
+\end{tikzpicture}
+}
+
+\newcommand{\titleplain}[2]{
+\begin{titlepage}
+\putdesign{white}
+\begin{center}
+\topskip0pt
+\vspace*{\fill}
+\Huge{\textbf{#1}} \\ 
+\vspace{5mm}
+\LARGE #2 \\
+\vspace{5mm}
+\vspace*{\fill}
+\end{center}
+\end{titlepage}
+}
+
+\newcommand{\titleplaintoday}[2]{
+\begin{titlepage}
+\putdesign{white}
+\begin{center}
+\topskip0pt
+\vspace*{\fill}
+\Huge{\textbf{#1}} \\ 
+\vspace{5mm}
+\LARGE #2 \\
+\vspace{5mm}
+\Large \today{} \\
+\vspace*{\fill}
+\end{center}
+\end{titlepage}
+}
+
+\newcommand{\titledesign}[2]{
+\begin{titlepage}
+\putdesign{\themecolor}
+\begin{center}
+\topskip0pt
+\vspace*{\fill}
+\Huge{\textbf{#1}} \\ 
+\vspace{5mm}
+\LARGE #2 \\
+\vspace{5mm}
+\vspace*{\fill}
+\end{center}
+\end{titlepage}
+}
+
+\newcommand{\titledesigntoday}[2]{
+\begin{titlepage}
+\putdesign{\themecolor}
+\begin{center}
+\topskip0pt
+\vspace*{\fill}
+\Huge{\textbf{#1}} \\ 
+\vspace{5mm}
+\LARGE #2 \\
+\vspace{5mm}
+\Large \today{} \\
+\vspace*{\fill}
+\end{center}
+\end{titlepage}
+}
+% END STY %
