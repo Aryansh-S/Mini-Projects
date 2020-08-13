@@ -1,8 +1,7 @@
 \usepackage{comment}
 \begin{comment}
 
->> ary.sty, created by Aryansh Shrivastava
-              as an attempt to conceive the ideal formatting style for a TeX document 
+>> ARY.STY -- CREATED BY ARYANSH SHRIVASTAVA
 
 The following credit suffices in a distributed source file; the compiled PDF does not require credit:
 % ary.sty from Aryansh Shrivastava, via Boost Software License 1.0 (https://github.com/Aryansh-S/Mini-Projects/blob/master/Dotfiles/ary.sty) 
@@ -152,6 +151,9 @@ Example of color design optional arg to change color of design:
 \titleformat{\section}{}{\bf\LARGE\textcolor{\themecolor}{\thesection} \,}{0em}{\LARGE\bf}
 \titlespacing{\section}{0cm}{0.37cm}{0.37cm}
 
+\titleformat{\subsection}{}{\bf\LARGE\textcolor{\themecolor}{\thesubsection} \,}{0em}{\LARGE\bf}
+\titlespacing{\subsection}{0cm}{0.37cm}{0.37cm}
+
 \let\oldtitle\title
 \usepackage{titletoc}
 
@@ -275,4 +277,5 @@ Example of color design optional arg to change color of design:
 \renewcommand\footnoterule{}
 
 \newcommand{\zerochapter}{\setcounter{chapter}{-1}}
-% END STY % 
+\setcounter{tocdepth}{1}
+% END STY %
