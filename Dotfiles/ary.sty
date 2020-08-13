@@ -138,16 +138,16 @@ Example of color design optional arg to change color of design:
 
 \titlespacing{\part}{0pt}{0pt}{0.75cm}
 
-\titleformat{\section}{}{\bf\Huge\textcolor{\themecolor}{\thesection} \,}{0em}{\huge\bf}
-
-\titlespacing{\section}{0pt}{0pt}{0.75cm}
-
 \let\oldtitle\title
 \usepackage{titletoc}
 
 \titleclass{\part}{top}
 \titleformat{\part}[display]
   {\normalfont\Huge}{\centering\thepart}{1em}{\centering}
+  
+\titleclass{\section}{top}
+\titleformat{\section}[display]
+  {\normalfont\Huge}{\centering\thesection}{1em}{\centering}
 
 \newcommand{\toc}{
 \doublespacing
