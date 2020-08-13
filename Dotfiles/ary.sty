@@ -88,6 +88,10 @@ Example of color design optional arg to change color of design:
 \hbadness=10000
 \setlength{\parindent}{0pt}
 
+\makeatletter
+\newcommand\HUGE{\@setfontsize\Huge{38}{47}} 
+\makeatother
+
 \newcommand\blfootnote[1]{%
   \begingroup
   \renewcommand\thefootnote{}\footnote{#1}%
@@ -107,9 +111,9 @@ Example of color design optional arg to change color of design:
 \let\oldthesection\thesection
 \let\oldthechapter\thechapter
 \let\oldthepart\thepart
-\renewcommand{\thesection}{\textcolor{\themecolor}{\S\,\oldthesection}}
+\renewcommand{\thesection}{\textcolor{\themecolor}{\S \oldthesection}}
 \renewcommand{\thechapter}{\textcolor{\themecolor}{\oldthechapter}}
-\renewcommand{\thepart}{\textcolor{\themecolor}{\oldthepart} \hspace{-3.5mm}}
+\renewcommand{\thepart}{\textcolor{\themecolor}{\oldthepart}}
 
 \definecolor{royal}{rgb}{0.9, 0.17, 0.31} % royal red custom default
 \definecolor{void}{HTML}{EC008C} % personal custom default
@@ -119,31 +123,39 @@ Example of color design optional arg to change color of design:
 
 \usepackage{tocloft}
 \usepackage{blindtext}
-\setlength{\cftpartindent}{0em}
-\setlength{\cftchapindent}{0em}
-\renewcommand{\cftchapfont}{\Large\bf}
-\renewcommand{\cftpartfont}{\Large\bf}
+
+\renewcommand{\cftbeforechapskip}{0cm}
+\renewcommand{\cftbeforepartskip}{0.2cm}
+
+\renewcommand{\cftsecpagefont}{\bf}
+\renewcommand{\cftpartpagefont}{\bf}
+\renewcommand{\cftchappagefont}{\bf}
+
+\renewcommand{\cfttoctitlefont}{\LARGE\bf}
+
+\renewcommand{\cftpartfont}{\bf}
+\renewcommand{\cftchapfont}{\bf}
+\renewcommand{\cftsecfont}{\bf}
+
 \renewcommand{\cftpartdotsep}{\cftdotsep}
 \renewcommand{\cftchapdotsep}{\cftdotsep}
+\renewcommand{\cftsecdotsep}{\cftdotsep}
+
 \setlength{\cftbeforetoctitleskip}{0pt}
-\setlength{\cftaftertoctitleskip}{0.75cm}
+\setlength{\cftaftertoctitleskip}{0.2cm}
 
-\newcommand{\nodate}{\date{\vspace{-1cm}}}
 
-\titleformat{\chapter}{}{\bf\Huge\textcolor{\themecolor}{\thechapter} \,}{0em}{\huge\bf}
-
+\titleformat{\chapter}{}{\bf\HUGE\textcolor{\themecolor}{\thechapter} \,}{0em}{\huge\bf}
 \titlespacing{\chapter}{0pt}{0pt}{0.75cm}
 
-\titleformat{\part}{}{\bf\Huge\textcolor{\themecolor}{\thepart} \,}{0em}{\huge\bf}
-
-\titlespacing{\part}{0pt}{0pt}{0.75cm}
+\titleformat{\section}{}{\bf\LARGE\textcolor{\themecolor}{\thesection} \,}{0em}{\LARGE\bf}
+\titlespacing{\section}{0pt}{0pt}{0.75cm}
 
 \let\oldtitle\title
 \usepackage{titletoc}
 
 \titleclass{\part}{top}
-\titleformat{\part}[display]
-  {\normalfont\Huge}{\centering\thepart}{1em}{\centering}
+\titleformat{\part}[display]{\bf\Huge}{\centering\thepart}{1em}{\centering}
 
 \newcommand{\toc}{
 \doublespacing
