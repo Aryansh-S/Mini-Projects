@@ -99,7 +99,7 @@ Example of color design optional arg to change color of design:
   \endgroup
 }
 
-\usepackage{hyperref}
+\usepackage[hypertexnames=false]{hyperref}
 \hypersetup{
     colorlinks=true,
     filecolor=black,
@@ -123,6 +123,9 @@ Example of color design optional arg to change color of design:
 
 \usepackage{tocloft}
 \usepackage{blindtext}
+
+%\cftsetindents{chapter}{0em}{3em}
+\cftsetindents{section}{1em}{3em}
 
 \renewcommand{\cftbeforechapskip}{0cm}
 \renewcommand{\cftbeforepartskip}{0.2cm}
