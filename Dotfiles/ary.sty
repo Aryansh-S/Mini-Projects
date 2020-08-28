@@ -60,14 +60,12 @@ Example of color design optional arg to change color of design:
 \usepackage{lipsum}
 \usepackage[dvipsnames]{xcolor}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
 \makeatletter
 \def\BState{\State\hskip-\ALG@thistlm}
 \makeatother
 \usepackage{graphicx}
-\usepackage[utf8]{inputenc}
 \usepackage[inline]{asymptote}
 \usepackage[english]{babel}
 \usepackage[autostyle, english = american]{csquotes}
@@ -99,8 +97,9 @@ Example of color design optional arg to change color of design:
   \endgroup
 }
 
-\usepackage[hypertexnames=false]{hyperref}
+\usepackage{hyperref}
 \hypersetup{
+    hypertexnames=false,
     colorlinks=true,
     filecolor=black,
     linkcolor=black,
